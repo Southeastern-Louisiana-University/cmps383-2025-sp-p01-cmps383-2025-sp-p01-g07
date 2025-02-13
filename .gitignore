@@ -261,3 +261,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/Selu383.SP25.Api/Migrations/20250208023041_SyncTheaterSeedData.cs
+/Selu383.SP25.Api/Migrations/20250208023041_SyncTheaterSeedData.Designer.cs

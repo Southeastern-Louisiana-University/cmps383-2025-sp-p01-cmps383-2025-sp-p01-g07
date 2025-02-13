@@ -67,6 +67,9 @@ public class TheatersController : ControllerBase
         if (string.IsNullOrWhiteSpace(dto.Address))
             return BadRequest();
 
+        if (dto.SeatCount < 1)
+            return BadRequest();
+
 
         var theater = new Theater
         {
@@ -121,10 +124,12 @@ public class TheatersController : ControllerBase
             Id = theaterToUpdate.Id,
             Name = theaterToUpdate.Name,
             Address = theaterToUpdate.Address,
+            SeatCount = theaterToUpdate.SeatCount,
         };
 
         return Ok(theaterToReturn);
     }
+
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteTheater(int id)
     {
